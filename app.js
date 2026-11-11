@@ -1049,7 +1049,7 @@ function sendOrderToWhatsApp() {
   const savings = order.subtotalCents - order.totalCents;
 
   const message = [
-    `Olá! Quero fazer um pedido na ${STORE.name}:`,
+    "Olá! Quero fazer um pedido na JDS Company:",
     "",
     ...order.entries.map(
       ({ product, quantity }) =>
