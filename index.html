@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JDS Company: tecnologia, acessórios e achadinhos. Peça pelo WhatsApp e pague com Pix."
+    />
+    <meta name="theme-color" content="#f3f4f6" />
+    <title>JDS Company — Tecnologia e acessórios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Um monte de coisa boa, pertinho de você.</span>
+      <span class="announcement-detail">Peça pelo WhatsApp · Pague com Pix</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="JDS Company — início">
+        <span class="brand-icon" aria-hidden="true">c</span>
+        <span class="brand-name">JDS Company</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre a loja</a>
+      </nav>
+      <button class="header-cta cart-trigger" id="cart-open" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+        Carrinho <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> ACHADINHOS PARA O SEU DIA A DIA</span>
+          <h1 id="hero-title">JDS Company<br /><span>RN</span></h1>
+          <p>Achadinhos, acessórios e produtos para deixar seu dia mais interessante. Escolha o que você precisa e a gente combina a entrega.</p>
+          <a class="primary-button" href="#produtos">Explorar produtos <span aria-hidden="true">↓</span></a>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✦</span>
+            <span>Tecnologia e atendimento pertinho de você.</span>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+          <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+          <section class="hero-carousel" id="hero-carousel" aria-label="Produtos em destaque" aria-roledescription="carrossel">
+            <div class="hero-carousel-card" id="hero-carousel-card">
+              <span class="hero-carousel-badge">✦ Em destaque</span>
+              <div class="hero-carousel-image-wrap">
+                <span class="hero-carousel-orbit" aria-hidden="true"></span>
+                <img class="hero-carousel-image" id="hero-carousel-image" src="" alt="" />
+              </div>
+              <div class="hero-carousel-info">
+                <span class="hero-carousel-category" id="hero-carousel-category"></span>
+                <h2 class="hero-carousel-title" id="hero-carousel-title"></h2>
+                <div class="hero-carousel-bottom">
+                  <div class="hero-carousel-pricing">
+                    <span class="hero-carousel-old-price" id="hero-carousel-old-price" hidden></span>
+                    <strong class="hero-carousel-price" id="hero-carousel-price"></strong>
+                  </div>
+                  <button class="hero-carousel-view" id="hero-carousel-view" type="button">Ver produto <span aria-hidden="true">↗</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-carousel-controls">
+              <button class="hero-carousel-arrow" id="hero-carousel-prev" type="button" aria-label="Produto anterior">‹</button>
+              <div class="hero-carousel-dots" id="hero-carousel-dots" role="group" aria-label="Escolher produto em destaque"></div>
+              <button class="hero-carousel-arrow" id="hero-carousel-next" type="button" aria-label="Próximo produto">›</button>
+              <button class="hero-carousel-pause" id="hero-carousel-pause" type="button" aria-label="Pausar carrossel automático" aria-pressed="false">Ⅱ</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="catalog section-wrap" id="produtos" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div class="catalog-title-group">
+            <div class="catalog-title-copy">
+              <span class="eyebrow">ESCOLHIDOS A DEDO</span>
+              <h2 id="catalog-title">Tem de tudo um pouco.</h2>
+            </div>
+            <div class="catalog-feature-buttons">
+              <button class="offers-feature-button" id="offers-feature-button" type="button" data-category="Ofertas" aria-pressed="false">
+                <span aria-hidden="true">✦</span> Ofertas
+              </button>
+              <button class="offers-feature-button" id="bestsellers-feature-button" type="button" data-category="Mais vendidos" aria-pressed="false">
+                <span aria-hidden="true">↗</span> Mais vendidos
+              </button>
+            </div>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="O que você procura?" aria-label="Buscar produtos" />
+          </label>
+        </div>
+
+        <div class="category-list" role="group" aria-label="Filtrar por categoria">
+          <button class="category-chip active" type="button" data-category="Todos" aria-pressed="true">Aba Inicial</button>
+          <button class="category-chip" type="button" data-category="Moda" aria-pressed="false">Moda</button>
+          <button class="category-chip" type="button" data-category="Celulares e Telefonia" aria-pressed="false">Celulares e Telefonia</button>
+          <button class="category-chip" type="button" data-category="Eletrônicos" aria-pressed="false">Eletrônicos</button>
+          <button class="category-chip" type="button" data-category="Acessórios" aria-pressed="false">Acessórios</button>
+          <button class="category-chip" type="button" data-category="Construção" aria-pressed="false">Materiais de Construção</button>
+          <button class="category-chip" type="button" data-category="Ferramentas" aria-pressed="false">Ferramentas</button>
+          <button class="category-chip" type="button" data-category="Esporte" aria-pressed="false">Esporte</button>
+          <button class="category-chip" type="button" data-category="Brinquedos" aria-pressed="false">Brinquedos</button>
+          <button class="category-chip" type="button" data-category="Papelaria" aria-pressed="false">Papelaria</button>
+          <button class="category-chip" type="button" data-category="Moveis" aria-pressed="false">Moveis</button>
+          <button class="category-chip" type="button" data-category="Eletrodomésticos" aria-pressed="false">Eletrodomésticos</button>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>Nenhum produto encontrado. Tente outra busca.</p>
+      </section>
+
+      <div class="product-detail-backdrop" id="product-detail-backdrop" hidden>
+        <section class="product-detail-dialog" id="product-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="product-detail-title">
+          <button class="product-detail-close" id="product-detail-close" type="button" aria-label="Fechar detalhes do produto">×</button>
+          <img class="product-detail-image" id="product-detail-image" alt="" />
+          <div class="product-detail-content">
+            <span class="product-category" id="product-detail-category"></span>
+            <h2 id="product-detail-title"></h2>
+            <div class="product-detail-price" id="product-detail-price"></div>
+            <p class="product-detail-description" id="product-detail-description"></p>
+            <div class="product-detail-stats">
+              <div>
+                <span class="product-detail-stat-label">Avaliação</span>
+                <div class="product-detail-rating">
+                  <span class="product-detail-stars" id="product-detail-stars" aria-hidden="true"></span>
+                  <span id="product-detail-rating"></span>
+                </div>
+              </div>
+              <div>
+                <span class="product-detail-stat-label">Comprados</span>
+                <strong id="product-detail-purchases"></strong>
+              </div>
+            </div>
+            <section class="product-reviews" aria-labelledby="product-reviews-title">
+              <h3 id="product-reviews-title">Avaliações deste produto</h3>
+              <div class="reviews-list" id="product-reviews-list" aria-live="polite">
+                <p class="reviews-empty" id="product-reviews-empty">Carregando avaliações...</p>
+              </div>
+              <div class="reviews-import">
+                <label class="reviews-import-button" for="approved-reviews-file">Carregar avaliações aprovadas</label>
+                <input id="approved-reviews-file" type="file" accept=".json,application/json" />
+                <p class="reviews-import-status" id="reviews-import-status" role="status"></p>
+              </div>
+              <form class="review-form" id="review-form">
+                <h3>Avalie este produto</h3>
+                <p>Ao enviar, seu aplicativo de e-mail abrirá com a avaliação pronta para macedo.samuel@escolar.ifrn.edu.br. Se não abrir, você poderá compor a mensagem pelo Gmail no navegador. Revise e confirme o envio; seu e-mail não será publicado nas avaliações.</p>
+                <div class="review-form-fields">
+                  <label for="review-name">Seu nome</label>
+                  <input id="review-name" name="name" type="text" maxlength="50" autocomplete="name" required />
+                  <label for="review-email">Seu e-mail</label>
+                  <input id="review-email" name="email" type="email" maxlength="254" autocomplete="email" required />
+                  <label for="review-rating">Sua nota</label>
+                  <select id="review-rating" name="rating" required>
+                    <option value="">Escolha de 1 a 5 estrelas</option>
+                    <option value="5">★★★★★ — 5 estrelas</option>
+                    <option value="4">★★★★☆ — 4 estrelas</option>
+                    <option value="3">★★★☆☆ — 3 estrelas</option>
+                    <option value="2">★★☆☆☆ — 2 estrelas</option>
+                    <option value="1">★☆☆☆☆ — 1 estrela</option>
+                  </select>
+                  <label for="review-message">Comentário</label>
+                  <textarea id="review-message" name="message" rows="3" maxlength="500" required></textarea>
+                </div>
+                <button class="checkout-button review-submit" type="submit">Enviar avaliação por e-mail</button>
+                <a class="review-email-fallback" id="review-email-fallback" target="_blank" rel="noopener noreferrer" hidden>Se o app não abrir, compor pelo Gmail no navegador</a>
+                <p class="review-status" id="review-status" role="status"></p>
+              </form>
+            </section>
+            <div class="product-detail-actions">
+              <button class="order-button" id="product-detail-add" type="button">Adicionar ao carrinho</button>
+              <button class="direct-buy-button" id="product-detail-buy" type="button">Comprar</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="cart-backdrop" id="cart-backdrop" hidden>
+        <section class="cart-dialog" id="cart-dialog" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+          <div class="cart-heading">
+            <div>
+              <span class="eyebrow">SEUS ACHADINHOS</span>
+              <h2 id="cart-title">Meu carrinho</h2>
+            </div>
+            <button class="cart-close" id="cart-close" type="button" aria-label="Fechar carrinho">×</button>
+          </div>
+          <div class="cart-items" id="cart-items" aria-live="polite"></div>
+          <p class="cart-empty" id="cart-empty">Seu carrinho ainda está vazio. Escolha seus produtos favoritos!</p>
+          <div class="cart-summary" id="cart-summary" hidden>
+            <div class="cart-total"><span>Subtotal</span><strong id="cart-subtotal"></strong></div>
+            <div class="cart-discount" id="cart-discount-row" hidden><span>Descontos nos produtos</span><strong id="cart-discount"></strong></div>
+            <div class="cart-discount" id="cart-volume-discount-row" hidden><span id="cart-volume-discount-label"></span><strong id="cart-volume-discount"></strong></div>
+            <div class="cart-total"><span>Total dos produtos</span><strong id="cart-total"></strong></div>
+            <p class="cart-promotion-hint" id="cart-discount-hint" hidden></p>
+            <p>Entrega combinada pelo WhatsApp.</p>
+            <button class="checkout-button" id="checkout-button" type="button">Gerar Pix para pagar <span aria-hidden="true">↗</span></button>
+            <section class="payment-details" id="payment-details" aria-labelledby="payment-title" hidden>
+              <h3 id="payment-title">Pague com Pix</h3>
+              <strong class="pix-amount" id="pix-amount"></strong>
+              <p>Escaneie o QR Code no aplicativo do seu banco ou copie o código Pix. O valor corresponde ao total do pedido.</p>
+              <img class="pix-qr-code" id="pix-qr-code" alt="" width="240" height="240" />
+              <label class="pix-code-label" for="pix-code">Código Pix copia e cola</label>
+              <textarea id="pix-code" class="pix-code" readonly rows="4" aria-label="Código Pix copia e cola"></textarea>
+              <button class="copy-pix-button" id="copy-pix-button" type="button">Copiar código Pix</button>
+              <p class="payment-notice" id="payment-notice" role="status"></p>
+              <button class="send-order-button" id="send-order-button" type="button" hidden>Já paguei — enviar pedido pelo WhatsApp</button>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <section class="how-it-works" id="sobre">
+        <div class="how-copy">
+          <span class="eyebrow">FÁCIL ASSIM</span>
+          <h2>Você escolhe.<br />A gente combina.</h2>
+          <p>Compre direto ou monte seu carrinho. Gere o Pix do pedido e, depois de pagar, envie a confirmação pelo WhatsApp.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">01</span>
+            <div><h3>Monte seu carrinho</h3><p>Adicione os produtos que quiser e ajuste as quantidades.</p></div>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <div><h3>Pague com Pix</h3><p>O QR Code e o código copia e cola são gerados com o total do carrinho.</p></div>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <div><h3>Envie seu pedido</h3><p>Depois de confirmar o pagamento no banco, libere a mensagem para a loja.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing-banner">
+        <div>
+          <span class="eyebrow">TEM UMA DÚVIDA?</span>
+          <h2>Estamos a uma mensagem de distância.</h2>
+        </div>
+        <a class="light-button" id="contact-link" href="#produtos">Falar com a loja <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="ZW Store RN — início">
+        <span class="brand-icon" aria-hidden="true">c</span>
+        <span class="brand-name">ZW Store RN</span>
+      </a>
+      <p>Feito com carinho. Pedido e entrega combinados pelo WhatsApp.</p>
+      <span class="copyright">© <span id="year"></span> ZW Store RN</span>
+    </footer>
+    <div class="setup-notice" id="setup-notice" role="status" hidden></div>
+    <script src="comments.js" defer></script>
+  </body>
+</html>
