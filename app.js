@@ -1,6 +1,6 @@
 // Configure os dados da sua loja antes de divulgar o site.
 const STORE = {
-  name: "ZW Store RN",
+  name: "JDS Company",
   whatsapp: "5584996202110",
   pixKey: "ef303c07-7e05-4d5b-8a9c-aba04ac818cd",
   pixPayload:
